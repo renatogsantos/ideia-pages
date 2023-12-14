@@ -9,12 +9,11 @@ export default function Home() {
     <>
       <MainNavbar />
 
-      <section className="bg-white dark:bg-gray-900">
-        <div className="container mx-auto my-4 p-6 lg:p-12 rounded-3xl bg-home-pages-cidades">
-          <div className="p-12">
-            <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-7xl dark:text-white">
-              Compre ou renove seu <br />
-              Certificado Digital em
+      <section className="mx-2">
+        <div className="container mx-auto my-4 rounded-3xl bg-home-pages-cidades">
+          <div className="p-6 lg:p-16 lg:w-2/3">
+            <h1 className="mb-4 text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white">
+              Compre ou renove seu Certificado Digital em
               <br />
               <span className="text-green-200">São Paulo</span>
             </h1>
@@ -42,7 +41,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section className="mx-2">
         <div className="container mx-auto my-24">
           <h2 className="mb-4 text-2xl lg:text-5xl text-center my-12 font-extrabold tracking-tight leading-none text-gray-900 dark:text-white">
             Certificação com os melhores valores você encontra aqui
@@ -58,12 +57,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section className="mx-2">
         <div className="container mx-auto my-12">
           <h2 className="mb-4 text-2xl lg:text-5xl text-center font-extrabold tracking-tight leading-none text-gray-900 dark:text-white">
             Na Rede Ideia você pode confiar
           </h2>
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-6">
             <span className="font-bold">São mais de 800 avaliações</span>
             <img
               src="/imgs/google.svg"
@@ -103,7 +102,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section className="mx-2">
         <div className="container mx-auto my-12 bg-gray-100 p-6 lg:p-12 rounded-3xl">
           <h2 className="mb-4 text-2xl lg:text-5xl text-center font-extrabold tracking-tight leading-none text-gray-900 dark:text-white">
             Seu certificado digital ICP-Brasil emitido em poucos minutos
@@ -151,7 +150,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section className="mx-2">
         <div className="container mx-auto my-12">
           <h2 className="mb-4 text-2xl lg:text-5xl text-center my-12 font-extrabold tracking-tight leading-none text-gray-900 dark:text-white">
             Dúvidas sobre o Certificado Digital?
@@ -166,7 +165,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section className="mx-2">
         <div className="container mx-auto my-12 p-12 rounded-3xl ideia-page-hero-1">
           <div className="flex flex-col gap-6">
             <h2 className="mb-4 text-2xl lg:text-5xl font-extrabold">
@@ -188,7 +187,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section className="mx-2">
         <div className="container mx-auto my-24">
           <h2 className="mb-4 text-2xl lg:text-5xl font-extrabold text-center">
             Seu certificado digital em{" "}
@@ -217,7 +216,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section className="mx-2">
         <div className="container mx-auto my-12">
           <div className="p-12 bg-gray-100 rounded-3xl">
             <h2 className="mb-4 text-2xl lg:text-5xl font-extrabold text-center">

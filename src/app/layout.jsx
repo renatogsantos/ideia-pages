@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body suppressHydrationWarning className={font.className}>
         <Providers>{children}</Providers>
-        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+        {/* <script src="../path/to/flowbite/dist/flowbite.min.js"></script> */}
       </body>
     </html>
   );

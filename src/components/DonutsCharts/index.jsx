@@ -1,15 +1,10 @@
 "use client";
-import dynamic from "next/dynamic";
-
-const ReactApexChart = dynamic(() => import("react-apexcharts"), {
-  ssr: false,
-  loading: () => <p>Loading...</p>,
-});
+import ReactApexChart from "react-apexcharts";
 
 export default function DonutChart({ labels, colors, series }) {
   const options = {
-    series: series || [100],
-    colors: colors || ["#fff"],
+    series: series ? series : [100],
+    colors: colors ? colors : ["#38c460"],
     chart: {
       height: 320,
       width: "100%",
@@ -54,7 +49,7 @@ export default function DonutChart({ labels, colors, series }) {
         },
       },
     },
-    labels: labels || ["Label"],
+    labels: labels ? labels : ["Label"],
     dataLabels: {
       enabled: false,
     },
@@ -66,7 +61,12 @@ export default function DonutChart({ labels, colors, series }) {
 
   return (
     <>
-      <ReactApexChart options={options} series={series} type="donut" />
+      <ReactApexChart
+        options={options}
+        series={series}
+        type="donut"
+        width={"100%"}
+      />
     </>
   );
 }

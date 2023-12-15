@@ -1,15 +1,56 @@
 import MainAccordion from "@/components/Accordion";
 import CardComments from "@/components/CardComments";
 import CardPrice from "@/components/CardPrice";
-import DonutChart from "@/components/DonutsCharts";
 import MainNavbar from "@/components/Navbar";
 import { Button, Input, Textarea } from "@nextui-org/react";
+//import DonutChart from "@/components/DonutsCharts";
+import dynamic from "next/dynamic";
+
+const DonutChart = dynamic(() => import("@/components/DonutsCharts"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
+
+const LinesChart = dynamic(() => import("@/components/LinesCharts"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
+
+const AreaChart = dynamic(() => import("@/components/AreaCharts"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
 
 export default function Home() {
-  const chartData = {
-    labels: ["Category 1", "Category 2", "Category 3", "Renato"],
+  const donutChartData = {
+    labels: ["Category 1", "Category 2", "Category 3", "Category 4"],
     series: [30, 40, 300, 1000],
     colors: ["#2ea24f", "#38c460", "#96d834", "#a9df57"],
+  };
+
+  const linesChartData = {
+    series: [
+      {
+        name: "Clicks",
+        data: [1500, 300, 2000, 1500, 3400, 2002],
+        color: "#2ea24f",
+      },
+      {
+        name: "CPC",
+        data: [1000, 3000, 2000, 500, 4000, 400],
+        color: "#38c460",
+      },
+      {
+        name: "ABC",
+        data: [700, 800, 1200, 2300, 3200, 6500],
+        color: "#96d834",
+      },
+      {
+        name: "ABC",
+        data: [1700, 2800, 3200, 1300, 4200, 5500],
+        color: "#96d834",
+      },
+    ],
   };
   return (
     <>
@@ -49,34 +90,19 @@ export default function Home() {
 
       <section>
         <div className="container mx-auto">
-          <div className="flex flex-col lg:flex-row items-center">
+          <div className="flex flex-col lg:flex-row items-center py-4">
             <div className="lg:w-1/4">
               <DonutChart
-                labels={chartData.labels}
-                series={chartData.series}
-                colors={chartData.colors}
+                labels={donutChartData.labels}
+                series={donutChartData.series}
+                colors={donutChartData.colors}
               />
             </div>
             <div className="lg:w-1/4">
-              <DonutChart
-                labels={chartData.labels}
-                series={chartData.series}
-                colors={chartData.colors}
-              />
+              <LinesChart series={linesChartData.series} />
             </div>
             <div className="lg:w-1/4">
-              <DonutChart
-                labels={chartData.labels}
-                series={chartData.series}
-                colors={chartData.colors}
-              />
-            </div>
-            <div className="lg:w-1/4">
-              <DonutChart
-                labels={chartData.labels}
-                series={chartData.series}
-                colors={chartData.colors}
-              />
+              <AreaChart series={linesChartData.series} />
             </div>
           </div>
         </div>

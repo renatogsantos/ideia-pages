@@ -1,10 +1,16 @@
 import MainAccordion from "@/components/Accordion";
 import CardComments from "@/components/CardComments";
 import CardPrice from "@/components/CardPrice";
+import DonutChart from "@/components/DonutsCharts";
 import MainNavbar from "@/components/Navbar";
 import { Button, Input, Textarea } from "@nextui-org/react";
 
 export default function Home() {
+  const chartData = {
+    labels: ["Category 1", "Category 2", "Category 3", "Renato"],
+    series: [30, 40, 300, 10],
+    colors: ["#2ea24f", "#38c460", "#96d834", "#a9df57"],
+  };
   return (
     <>
       <MainNavbar />
@@ -36,6 +42,41 @@ export default function Home() {
               >
                 Fale com um especialista
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container mx-auto">
+          <div className="flex flex-col lg:flex-row items-center">
+            <div className="lg:w-1/4">
+              <DonutChart
+                labels={chartData.labels}
+                series={chartData.series}
+                colors={chartData.colors}
+              />
+            </div>
+            <div className="lg:w-1/4">
+              <DonutChart
+                labels={chartData.labels}
+                series={chartData.series}
+                colors={chartData.colors}
+              />
+            </div>
+            <div className="lg:w-1/4">
+              <DonutChart
+                labels={chartData.labels}
+                series={chartData.series}
+                colors={chartData.colors}
+              />
+            </div>
+            <div className="lg:w-1/4">
+              <DonutChart
+                labels={chartData.labels}
+                series={chartData.series}
+                colors={chartData.colors}
+              />
             </div>
           </div>
         </div>

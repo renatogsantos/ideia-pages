@@ -8,7 +8,7 @@ import { Button, Input, Textarea } from "@nextui-org/react";
 export default function Home() {
   const chartData = {
     labels: ["Category 1", "Category 2", "Category 3", "Renato"],
-    series: [30, 40, 300, 10],
+    series: [30, 40, 300, 1000],
     colors: ["#2ea24f", "#38c460", "#96d834", "#a9df57"],
   };
   return (
